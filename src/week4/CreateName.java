@@ -11,6 +11,9 @@ import java.util.List;
 import edu.princeton.cs.algs4.StdRandom;
 
 public class CreateName {
+	{
+		String name = "陈歆祎";
+	}
 	public static ArrayList<Character> excludes = new ArrayList<Character>();
 	{
 		excludes.add('半');
