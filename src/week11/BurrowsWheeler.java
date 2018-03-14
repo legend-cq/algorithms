@@ -6,10 +6,7 @@ import edu.princeton.cs.algs4.BinaryStdOut;
 public class BurrowsWheeler {
 	// apply Burrows-Wheeler transform, reading from standard input and writing to standard output
     public static void transform() {
-    	String str = null;
-    	while (!BinaryStdIn.isEmpty()) {
-    		str = BinaryStdIn.readString();
-    	}
+    	String str = BinaryStdIn.readString();;
     	CircularSuffixArray suffixArr = new CircularSuffixArray(str);
     	for (int i = 0; i < suffixArr.length(); i++) {
     		if (suffixArr.index(i) == 0) {
@@ -30,11 +27,8 @@ public class BurrowsWheeler {
     // apply Burrows-Wheeler inverse transform, reading from standard input and writing to standard output
     public static void inverseTransform() {
     	int start = BinaryStdIn.readInt();
-    	StringBuilder sb = new StringBuilder();
-    	while (!BinaryStdIn.isEmpty()) {
-    		sb.append(BinaryStdIn.readChar());
-    	}
-    	char[] lastCol = sb.toString().toCharArray();
+    	String str = BinaryStdIn.readString();;
+    	char[] lastCol = str.toCharArray();
     	int[] count = new int[256];
     	for (char c : lastCol) {
     		count[c]++;
